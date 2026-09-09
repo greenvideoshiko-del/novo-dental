@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NOVO Dental Clinic | Your Smile. Our Passion.</title>
+
+<meta name="description" content="NOVO Dental Clinic - Modern dental care for confident smiles.">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+:root{
+--primary:#0d5c63;
+--secondary:#c89b3c;
+--light:#f7f5f0;
+--dark:#152126;
+--text:#5f686b;
+--white:#ffffff;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:var(--light);
+color:var(--dark);
+line-height:1.6;
+}
+
+a{
+text-decoration:none;
+}
+
+img{
+max-width:100%;
+}
+
+/* NAVBAR */
+
+nav{
+height:75px;
+background:white;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 7%;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 15px rgba(0,0,0,.06);
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+letter-spacing:5px;
+color:var(--primary);
+}
+
+.logo span{
+color:var(--secondary);
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:25px;
+}
+
+.nav-links a{
+color:var(--dark);
+font-size:14px;
+font-weight:bold;
+}
+
+.nav-links a:hover{
+color:var(--secondary);
+}
+
+.lang-btn{
+border:none;
+background:var(--dark);
+color:white;
+padding:10px 16px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+min-height:85vh;
+display:flex;
+align-items:center;
+background:
+linear-gradient(90deg,
+rgba(247,245,240,.96) 45%,
+rgba(247,245,240,.45)),
+url('https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1600&q=80');
+
+background-size:cover;
+background-position:center;
+padding:70px 8%;
+}
+
+.hero-content{
+max-width:650px;
+}
+
+.hero-tag{
+color:var(--secondary);
+font-weight:bold;
+letter-spacing:2px;
+margin-bottom:15px;
+}
+
+.hero h1{
+font-size:62px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:var(--primary);
+}
+
+.hero p{
+font-size:18px;
+color:var(--text);
+margin-bottom:30px;
+max-width:550px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-block;
+padding:15px 25px;
+background:var(--primary);
+color:white;
+border-radius:6px;
+font-weight:bold;
+transition:.3s;
+border:none;
+cursor:pointer;
+}
+
+.btn:hover{
+background:var(--dark);
+transform:translateY(-2px);
+}
+
+.btn-gold{
+background:var(--secondary);
+color:white;
+}
+
+/* TRUST BAR */
+
+.trust{
+background:var(--primary);
+color:white;
+padding:25px 8%;
+display:flex;
+justify-content:center;
+gap:70px;
+flex-wrap:wrap;
+text-align:center;
+}
+
+.trust-item h3{
+font-size:24px;
+color:#f3d28b;
+}
+
+.trust-item p{
+font-size:13px;
+}
+
+/* SECTIONS */
+
+.section{
+padding:90px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:15px;
+}
+
+.section-title span{
+color:var(--primary);
+}
+
+.section-desc{
+text-align:center;
+color:var(--text);
+max-width:650px;
+margin:0 auto 50px;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.service{
+background:white;
+padding:35px 25px;
+border-radius:12px;
+transition:.3s;
+border:1px solid #eee;
+}
+
+.service:hover{
+transform:translateY(-7px);
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+.service-icon{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.service h3{
+margin-bottom:10px;
+color:var(--primary);
+}
+
+.service p{
+color:var(--text);
+font-size:14px;
+}
+
+/* ABOUT */
+
+.about{
+background:white;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about-image img{
+border-radius:15px;
+width:100%;
+height:450px;
+object-fit:cover;
+}
+
+.about-content h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.about-content h2 span{
+color:var(--primary);
+}
+
+.about-content p{
+color:var(--text);
+margin-bottom:20px;
+}
+
+/* DOCTOR */
+
+.doctor-card{
+max-width:850px;
+margin:auto;
+display:grid;
+grid-template-columns:300px 1fr;
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+}
+
+.doctor-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.doctor-info{
+padding:40px;
+}
+
+.doctor-info h2{
+color:var(--primary);
+margin-bottom:5px;
+}
+
+.doctor-info h4{
+color:var(--secondary);
+margin-bottom:20px;
+}
+
+/* WHY US */
+
+.why{
+background:var(--dark);
+color:white;
+}
+
+.why .section-title span{
+color:var(--secondary);
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.why-card{
+padding:25px;
+text-align:center;
+}
+
+.why-card .icon{
+font-size:38px;
+margin-bottom:10px;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.testimonial{
+background:white;
+padding:30px;
+border-radius:12px;
+}
+
+.stars{
+color:#e0ad42;
+margin-bottom:15px;
+}
+
+.testimonial p{
+color:var(--text);
+font-style:italic;
+}
+
+.patient{
+margin-top:15px;
+font-weight:bold;
+color:var(--primary);
+}
+
+/* CONTACT */
+
+.contact{
+background:var(--primary);
+color:white;
+}
+
+.contact .section-title span{
+color:#f4cf7c;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+max-width:1000px;
+margin:auto;
+}
+
+.contact-info h3{
+margin-bottom:20px;
+font-size:24px;
+}
+
+.contact-info p{
+margin:12px 0;
+}
+
+.form{
+background:white;
+padding:30px;
+border-radius:12px;
+}
+
+input,
+textarea{
+width:100%;
+padding:14px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:6px;
+font-size:15px;
+}
+
+textarea{
+height:120px;
+resize:none;
+}
+
+.form .btn{
+width:100%;
+}
+
+/* FOOTER */
+
+footer{
+background:#0b1417;
+color:#aaa;
+text-align:center;
+padding:40px 20px;
+}
+
+.footer-logo{
+font-size:28px;
+letter-spacing:5px;
+color:white;
+margin-bottom:15px;
+}
+
+.footer-logo span{
+color:var(--secondary);
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+z-index:2000;
+box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+padding:0 20px;
+}
+
+.nav-links a{
+display:none;
+}
+
+.hero{
+padding:60px 25px;
+min-height:75vh;
+background:
+linear-gradient(90deg,
+rgba(247,245,240,.95),
+rgba(247,245,240,.75)),
+url('https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.section{
+padding:65px 20px;
+}
+
+.section-title{
+font-size:32px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+.about-image img{
+height:300px;
+}
+
+.doctor-card{
+grid-template-columns:1fr;
+}
+
+.doctor-card img{
+height:350px;
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.trust{
+gap:25px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<nav>
+
+<div class="logo">
+NO<span>VO</span>
+</div>
+
+<div class="nav-links">
+
+<a href="#services" id="navServices">Services</a>
+
+<a href="#about" id="navAbout">About</a>
+
+<a href="#doctor" id="navDoctor">Doctor</a>
+
+<a href="#contact" id="navContact">Contact</a>
+
+<button class="lang-btn" onclick="toggleLanguage()" id="languageButton">
+عربي
+</button>
+
+</div>
+
+</nav>
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-tag" id="heroTag">
+MODERN DENTISTRY
+</div>
+
+<h1 id="heroTitle">
+Your Smile.<br>
+<span>Our Passion.</span>
+</h1>
+
+<p id="heroText">
+Modern dental care designed around you. 
+At NOVO Dental Clinic, we combine advanced technology with gentle, personalized care.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#contact" class="btn" id="bookButton">
+BOOK AN APPOINTMENT
+</a>
+
+<a href="#services" class="btn btn-gold" id="servicesButton">
+OUR SERVICES
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="trust">
+
+<div class="trust-item">
+<h3>10+</h3>
+<p id="trust1">Years of Experience</p>
+</div>
+
+<div class="trust-item">
+<h3>5,000+</h3>
+<p id="trust2">Happy Patients</p>
+</div>
+
+<div class="trust-item">
+<h3>4.9 ★</h3>
+<p id="trust3">Patient Rating</p>
+</div>
+
+<div class="trust-item">
+<h3>100%</h3>
+<p id="trust4">Patient Focused Care</p>
+</div>
+
+</section>
+
+
+<section class="section" id="services">
+
+<h2 class="section-title" id="servicesTitle">
+Our <span>Services</span>
+</h2>
+
+<p class="section-desc" id="servicesDesc">
+Comprehensive dental care for a healthier, more confident smile.
+</p>
+
+
+<div class="services">
+
+<div class="service">
+<div class="service-icon">😁</div>
+<h3 id="service1Title">Cosmetic Dentistry</h3>
+<p id="service1Text">Transform your smile with modern cosmetic treatments.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">🦷</div>
+<h3 id="service2Title">Dental Implants</h3>
+<p id="service2Text">Restore missing teeth with natural-looking implants.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">✨</div>
+<h3 id="service3Title">Teeth Whitening</h3>
+<p id="service3Text">Professional whitening for a brighter smile.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">🪥</div>
+<h3 id="service4Title">General Dentistry</h3>
+<p id="service4Text">Routine care to keep your teeth healthy and strong.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section about" id="about">
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80">
+
+</div>
+
+
+<div class="about-content">
+
+<h2 id="aboutTitle">
+A Better <span>Dental Experience.</span>
+</h2>
+
+<p id="aboutText1">
+We believe visiting the dentist should feel comfortable, calm and personal.
+</p>
+
+<p id="aboutText2">
+Our clinic combines modern technology, experienced professionals and patient-focused care to give you the confidence to smile again.
+</p>
+
+<a href="#contact" class="btn" id="aboutButton">
+MEET OUR TEAM
+</a>
+
+</div>
+
+</section>
+
+
+<section class="section" id="doctor">
+
+<h2 class="section-title" id="doctorSectionTitle">
+Meet Your <span>Dentist</span>
+</h2>
+
+
+<div class="doctor-card">
+
+<img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80">
+
+<div class="doctor-info">
+
+<h2 id="doctorName">Dr. Olivia Morgan</h2>
+
+<h4 id="doctorSpecialty">
+Cosmetic & Restorative Dentist
+</h4>
+
+<p id="doctorText">
+With years of experience in modern dentistry, Dr. Olivia is passionate about helping patients achieve healthy and confident smiles.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section why">
+
+<h2 class="section-title" id="whyTitle">
+Why Choose <span>NOVO?</span>
+</h2>
+
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<div class="icon">🔬</div>
+
+<h3 id="why1Title">Modern Technology</h3>
+
+<p id="why1Text">Advanced equipment for precise and comfortable treatment.</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="icon">🤍</div>
+
+<h3 id="why2Title">Gentle Care</h3>
+
+<p id="why2Text">We make every visit comfortable and stress-free.</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="icon">👩‍⚕️</div>
+
+<h3 id="why3Title">Expert Team</h3>
+
+<p id="why3Text">Experienced professionals focused on your smile.</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="icon">📅</div>
+
+<h3 id="why4Title">Easy Booking</h3>
+
+<p id="why4Text">Book your appointment quickly and easily.</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2 class="section-title" id="reviewsTitle">
+What Our <span>Patients Say</span>
+</h2>
+
+
+<div class="testimonials">
+
+<div class="testimonial">
+
+<div class="stars">★★★★★</div>
+
+<p id="review1">
+"The best dental experience I've ever had. Professional, friendly and completely pain-free."
+</p>
+
+<div class="patient">— Sarah M.</div>
+
+</div>
+
+
+<div class="testimonial">
+
+<div class="stars">★★★★★</div>
+
+<p id="review2">
+"Beautiful clinic and an amazing team. I finally feel confident about my smile."
+</p>
+
+<div class="patient">— Michael R.</div>
+
+</div>
+
+
+<div class="testimonial">
+
+<div class="stars">★★★★★</div>
+
+<p id="review3">
+"Everything was explained clearly and the whole experience was incredibly comfortable."
+</p>
+
+<div class="patient">— Emma L.</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section contact" id="contact">
+
+<h2 class="section-title" id="contactTitle">
+Book Your <span>Appointment</span>
+</h2>
+
+<p class="section-desc" id="contactDesc">
+Ready for a healthier smile? Contact us today.
+</p>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-info">
+
+<h3 id="visitTitle">Visit NOVO Dental</h3>
+
+<p>📍 <span id="address">123 Modern Street, Your City</span></p>
+
+<p>📞 +20 100 000 0000</p>
+
+<p>✉ hello@novodental.com</p>
+
+<p>🕒 <span id="hours">Sat - Thu | 10:00 AM - 9:00 PM</span></p>
+
+</div>
+
+
+<div class="form">
+
+<form id="appointmentForm">
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required>
+
+<input
+type="tel"
+id="phone"
+placeholder="Phone Number"
+required>
+
+<textarea
+id="message"
+placeholder="How can we help you?"></textarea>
+
+<button type="submit" class="btn" id="sendButton">
+REQUEST APPOINTMENT
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="footer-logo">
+NO<span>VO</span>
+</div>
+
+<p id="footerText">
+Modern Dentistry. Confident Smiles.
+</p>
+
+<br>
+
+<p>© 2026 NOVO Dental Clinic. Demo Website by ATHAR.</p>
+
+</footer>
+
+
+<a
+href="https://wa.me/201289122717"
+target="_blank"
+class="whatsapp">
+💬
+</a>
+
+
+<script>
+
+let currentLanguage = "en";
+
+
+const english = {
+
+navServices:"Services",
+navAbout:"About",
+navDoctor:"Doctor",
+navContact:"Contact",
+
+heroTag:"MODERN DENTISTRY",
+
+heroTitle:'Your Smile.<br><span>Our Passion.</span>',
+
+heroText:"Modern dental care designed around you. At NOVO Dental Clinic, we combine advanced technology with gentle, personalized care.",
+
+bookButton:"BOOK AN APPOINTMENT",
+
+servicesButton:"OUR SERVICES",
+
+trust1:"Years of Experience",
+trust2:"Happy Patients",
+trust3:"Patient Rating",
+trust4:"Patient Focused Care",
+
+servicesTitle:'Our <span>Services</span>',
+
+servicesDesc:"Comprehensive dental care for a healthier, more confident smile.",
+
+service1Title:"Cosmetic Dentistry",
+service1Text:"Transform your smile with modern cosmetic treatments.",
+
+service2Title:"Dental Implants",
+service2Text:"Restore missing teeth with natural-looking implants.",
+
+service3Title:"Teeth Whitening",
+service3Text:"Professional whitening for a brighter smile.",
+
+service4Title:"General Dentistry",
+service4Text:"Routine care to keep your teeth healthy and strong.",
+
+aboutTitle:'A Better <span>Dental Experience.</span>',
+
+aboutText1:"We believe visiting the dentist should feel comfortable, calm and personal.",
+
+aboutText2:"Our clinic combines modern technology, experienced professionals and patient-focused care to give you the confidence to smile again.",
+
+aboutButton:"MEET OUR TEAM",
+
+doctorSectionTitle:'Meet Your <span>Dentist</span>',
+
+doctorName:"Dr. Olivia Morgan",
+
+doctorSpecialty:"Cosmetic & Restorative Dentist",
+
+doctorText:"With years of experience in modern dentistry, Dr. Olivia is passionate about helping patients achieve healthy and confident smiles.",
+
+whyTitle:'Why Choose <span>NOVO?</span>',
+
+why1Title:"Modern Technology",
+why1Text:"Advanced equipment for precise and comfortable treatment.",
+
+why2Title:"Gentle Care",
+why2Text:"We make every visit comfortable and stress-free.",
+
+why3Title:"Expert Team",
+why3Text:"Experienced professionals focused on your smile.",
+
+why4Title:"Easy Booking",
+why4Text:"Book your appointment quickly and easily.",
+
+reviewsTitle:'What Our <span>Patients Say</span>',
+
+review1:'"The best dental experience I\'ve ever had. Professional, friendly and completely pain-free."',
+
+review2:'"Beautiful clinic and an amazing team. I finally feel confident about my smile."',
+
+review3:'"Everything was explained clearly and the whole experience was incredibly comfortable."',
+
+contactTitle:'Book Your <span>Appointment</span>',
+
+contactDesc:"Ready for a healthier smile? Contact us today.",
+
+visitTitle:"Visit NOVO Dental",
+
+address:"123 Modern Street, Your City",
+
+hours:"Sat - Thu | 10:00 AM - 9:00 PM",
+
+sendButton:"REQUEST APPOINTMENT",
+
+footerText:"Modern Dentistry. Confident Smiles."
+
+};
+
+
+const arabic = {
+
+navServices:"الخدمات",
+navAbout:"عن العيادة",
+navDoctor:"الطبيب",
+navContact:"تواصل",
+
+heroTag:"طب أسنان حديث",
+
+heroTitle:'ابتسامتك.<br><span>شغفنا.</span>',
+
+heroText:"رعاية أسنان حديثة مصممة من أجلك. في عيادة NOVO نجمع بين التكنولوجيا الحديثة والرعاية الشخصية الهادئة.",
+
+bookButton:"احجز موعدًا",
+
+servicesButton:"خدماتنا",
+
+trust1:"سنوات من الخبرة",
+trust2:"مريض سعيد",
+trust3:"تقييم المرضى",
+trust4:"رعاية تركز على المريض",
+
+servicesTitle:'خدماتنا <span>الطبية</span>',
+
+servicesDesc:"رعاية متكاملة لأسنان صحية وابتسامة أكثر ثقة.",
+
+service1Title:"تجميل الأسنان",
+service1Text:"غيّر ابتسامتك بأحدث تقنيات تجميل الأسنان.",
+
+service2Title:"زراعة الأسنان",
+service2Text:"استعادة الأسنان المفقودة بزراعة طبيعية المظهر.",
+
+service3Title:"تبييض الأسنان",
+service3Text:"تبييض احترافي للحصول على ابتسامة أكثر إشراقًا.",
+
+service4Title:"طب الأسنان العام",
+service4Text:"رعاية دورية للحفاظ على صحة وقوة أسنانك.",
+
+aboutTitle:'تجربة أسنان <span>أفضل.</span>',
+
+aboutText1:"نؤمن أن زيارة طبيب الأسنان يجب أن تكون مريحة وهادئة وشخصية.",
+
+aboutText2:"تجمع عيادتنا بين التكنولوجيا الحديثة والخبرة والرعاية التي تركز على المريض لتمنحك الثقة في ابتسامتك.",
+
+aboutButton:"تعرف على فريقنا",
+
+doctorSectionTitle:'تعرف على <span>طبيبك</span>',
+
+doctorName:"د. أوليفيا مورغان",
+
+doctorSpecialty:"طبيبة تجميل وترميم الأسنان",
+
+doctorText:"بخبرة واسعة في طب الأسنان الحديث، تهتم د. أوليفيا بمساعدة المرضى للحصول على ابتسامات صحية وواثقة.",
+
+whyTitle:'لماذا تختار <span>NOVO؟</span>',
+
+why1Title:"تكنولوجيا حديثة",
+why1Text:"أجهزة متطورة لعلاج دقيق ومريح.",
+
+why2Title:"رعاية لطيفة",
+why2Text:"نجعل كل زيارة مريحة وخالية من التوتر.",
+
+why3Title:"فريق متخصص",
+why3Text:"خبراء يهتمون بصحة وابتسامة كل مريض.",
+
+why4Title:"حجز سهل",
+why4Text:"احجز موعدك بسرعة وسهولة.",
+
+reviewsTitle:'ماذا يقول <span>مرضانا</span>',
+
+review1:'"أفضل تجربة أسنان مررت بها. احترافية وودودة ومريحة للغاية."',
+
+review2:'"عيادة جميلة وفريق رائع. أصبحت أشعر بثقة أكبر في ابتسامتي."',
+
+review3:'"تم شرح كل شيء بوضوح وكانت التجربة مريحة جدًا."',
+
+contactTitle:'احجز <span>موعدك</span>',
+
+contactDesc:"هل أنت مستعد لابتسامة أكثر صحة؟ تواصل معنا اليوم.",
+
+visitTitle:"زيارة عيادة NOVO",
+
+address:"123 شارع مودرن، مدينتك",
+
+hours:"السبت - الخميس | 10 صباحًا - 9 مساءً",
+
+sendButton:"طلب حجز موعد",
+
+footerText:"طب أسنان حديث. ابتسامات واثقة."
+
+};
+
+
+function toggleLanguage(){
+
+currentLanguage =
+currentLanguage === "en" ? "ar" : "en";
+
+
+const data =
+currentLanguage === "en" ? english : arabic;
+
+
+document.documentElement.lang =
+currentLanguage;
+
+
+document.documentElement.dir =
+currentLanguage === "en" ? "ltr" : "rtl";
+
+
+document.body.style.direction =
+currentLanguage === "en" ? "ltr" : "rtl";
+
+
+document.getElementById("languageButton").innerText =
+currentLanguage === "en" ? "عربي" : "EN";
+
+
+for(let key in data){
+
+const element =
+document.getElementById(key);
+
+if(element){
+
+element.innerHTML =
+data[key];
+
+}
+
+}
+
+
+if(currentLanguage === "ar"){
+
+document.getElementById("name").placeholder="الاسم";
+
+document.getElementById("phone").placeholder="رقم الهاتف";
+
+document.getElementById("message").placeholder="كيف يمكننا مساعدتك؟";
+
+}
+
+else{
+
+document.getElementById("name").placeholder="Your Name";
+
+document.getElementById("phone").placeholder="Phone Number";
+
+document.getElementById("message").placeholder="How can we help you?";
+
+}
+
+}
+
+
+document
+.getElementById("appointmentForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+
+const name =
+document.getElementById("name").value;
+
+const phone =
+document.getElementById("phone").value;
+
+const message =
+document.getElementById("message").value;
+
+
+const text =
+"Hello NOVO Dental!%0A%0A"+
+"Appointment Request%0A%0A"+
+"Name: "+name+"%0A"+
+"Phone: "+phone+"%0A"+
+"Message: "+message;
+
+
+window.open(
+
+"https://wa.me/201289122717?text="+
+encodeURIComponent(text),
+
+"_blank"
+
+);
+
+});
+
+</script>
+
+</body>
+</html>
