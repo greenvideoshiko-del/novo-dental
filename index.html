@@ -1,1355 +1,1023 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>NOVO Dental Clinic | Your Smile. Our Passion.</title>
 
-<meta name="description" content="NOVO Dental Clinic - Modern dental care for confident smiles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html{
-scroll-behavior:smooth;
-}
-
-:root{
---primary:#0d5c63;
---secondary:#c89b3c;
---light:#f7f5f0;
---dark:#152126;
---text:#5f686b;
---white:#ffffff;
+  scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,sans-serif;
-background:var(--light);
-color:var(--dark);
-line-height:1.6;
+  font-family:Inter,sans-serif;
+  color:#17324d;
+  background:#fff;
+  line-height:1.6;
+}
+
+body.ar{
+  font-family:Cairo,sans-serif;
+  direction:rtl;
 }
 
 a{
-text-decoration:none;
+  text-decoration:none;
+  color:inherit;
 }
 
-img{
-max-width:100%;
+button,input,textarea{
+  font:inherit;
 }
 
-/* NAVBAR */
+.container{
+  width:min(1120px,92%);
+  margin:auto;
+}
 
-nav{
-height:75px;
-background:white;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 7%;
-position:sticky;
-top:0;
-z-index:1000;
-box-shadow:0 2px 15px rgba(0,0,0,.06);
+/* NAV */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #e8eef3;
+}
+
+.navbar{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
 
 .logo{
-font-size:30px;
-font-weight:bold;
-letter-spacing:5px;
-color:var(--primary);
+  font-size:28px;
+  font-weight:800;
+  color:#0b8f8f;
 }
 
 .logo span{
-color:var(--secondary);
+  color:#d2a64a;
 }
 
 .nav-links{
-display:flex;
-align-items:center;
-gap:25px;
+  display:flex;
+  gap:28px;
+  list-style:none;
 }
 
 .nav-links a{
-color:var(--dark);
-font-size:14px;
-font-weight:bold;
+  font-size:14px;
+  font-weight:600;
+  color:#36536b;
 }
 
 .nav-links a:hover{
-color:var(--secondary);
+  color:#0b8f8f;
 }
 
-.lang-btn{
-border:none;
-background:var(--dark);
-color:white;
-padding:10px 16px;
-border-radius:6px;
-cursor:pointer;
-font-weight:bold;
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.language-btn{
+  border:1px solid #d9e5eb;
+  background:#fff;
+  padding:9px 13px;
+  border-radius:9px;
+  cursor:pointer;
+  font-weight:700;
+}
+
+.mobile-menu{
+  display:none;
+  border:0;
+  background:transparent;
+  font-size:26px;
+  cursor:pointer;
 }
 
 /* HERO */
 
 .hero{
-min-height:85vh;
-display:flex;
-align-items:center;
-background:
-linear-gradient(90deg,
-rgba(247,245,240,.96) 45%,
-rgba(247,245,240,.45)),
-url('https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1600&q=80');
-background-size:cover;
-background-position:center;
-padding:70px 8%;
+  min-height:650px;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.97),rgba(255,255,255,.78)),
+    radial-gradient(circle at 80% 30%,#d8f3f2,transparent 35%),
+    linear-gradient(135deg,#eefafa,#fff);
 }
 
 .hero-content{
-max-width:650px;
+  max-width:680px;
+  padding:80px 0;
 }
 
-.hero-tag{
-color:var(--secondary);
-font-weight:bold;
-letter-spacing:2px;
-margin-bottom:15px;
+.eyebrow{
+  display:inline-block;
+  color:#0b8f8f;
+  background:#e6f7f6;
+  padding:8px 14px;
+  border-radius:50px;
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:18px;
 }
 
 .hero h1{
-font-size:62px;
-line-height:1.1;
-margin-bottom:20px;
+  font-size:clamp(42px,6vw,70px);
+  line-height:1.08;
+  margin-bottom:22px;
+  color:#153b59;
 }
 
 .hero h1 span{
-color:var(--primary);
+  color:#0b8f8f;
 }
 
 .hero p{
-font-size:18px;
-color:var(--text);
-margin-bottom:30px;
-max-width:550px;
+  color:#60788d;
+  font-size:18px;
+  max-width:600px;
+  margin-bottom:30px;
 }
 
 .hero-buttons{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
+  display:flex;
+  flex-wrap:wrap;
+  gap:13px;
 }
 
 .btn{
-display:inline-block;
-padding:15px 25px;
-background:var(--primary);
-color:white;
-border-radius:6px;
-font-weight:bold;
-transition:.3s;
-border:none;
-cursor:pointer;
+  border:0;
+  cursor:pointer;
+  border-radius:10px;
+  padding:14px 22px;
+  font-weight:700;
+  transition:.25s;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
 }
 
-.btn:hover{
-background:var(--dark);
-transform:translateY(-2px);
+.btn-primary{
+  background:#0b8f8f;
+  color:#fff;
 }
 
-.btn-gold{
-background:var(--secondary);
-color:white;
+.btn-primary:hover{
+  background:#087777;
+  transform:translateY(-2px);
 }
 
-/* TRUST BAR */
-
-.trust{
-background:var(--primary);
-color:white;
-padding:25px 8%;
-display:flex;
-justify-content:center;
-gap:70px;
-flex-wrap:wrap;
-text-align:center;
+.btn-outline{
+  border:1px solid #cbdde5;
+  background:#fff;
+  color:#17324d;
 }
 
-.trust-item h3{
-font-size:24px;
-color:#f3d28b;
+/* TRUST */
+
+.trust-bar{
+  border-bottom:1px solid #e8eef3;
 }
 
-.trust-item p{
-font-size:13px;
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  padding:25px 0;
+}
+
+.trust-item{
+  text-align:center;
+}
+
+.trust-item strong{
+  display:block;
+  font-size:16px;
+}
+
+.trust-item span{
+  color:#7890a0;
+  font-size:13px;
 }
 
 /* SECTIONS */
 
-.section{
-padding:90px 8%;
+section{
+  padding:90px 0;
 }
 
-.section-title{
-text-align:center;
-font-size:40px;
-margin-bottom:15px;
+.section-heading{
+  text-align:center;
+  max-width:720px;
+  margin:0 auto 50px;
 }
 
-.section-title span{
-color:var(--primary);
+.section-heading small{
+  color:#0b8f8f;
+  font-weight:800;
 }
 
-.section-desc{
-text-align:center;
-color:var(--text);
-max-width:650px;
-margin:0 auto 50px;
+.section-heading h2{
+  margin:10px 0 14px;
+  font-size:clamp(30px,4vw,46px);
+  line-height:1.15;
+}
+
+.section-heading p{
+  color:#6b8192;
 }
 
 /* SERVICES */
 
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+.services,
+.doctor-section,
+.testimonials{
+  background:#f8fbfc;
 }
 
-.service{
-background:white;
-padding:35px 25px;
-border-radius:12px;
-transition:.3s;
-border:1px solid #eee;
+.services-grid,
+.why-grid,
+.testimonial-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
 }
 
-.service:hover{
-transform:translateY(-7px);
-box-shadow:0 15px 30px rgba(0,0,0,.08);
+.service-card,
+.why-card,
+.testimonial{
+  background:#fff;
+  border:1px solid #e7eef2;
+  border-radius:18px;
+  padding:30px;
+  transition:.25s;
+}
+
+.service-card:hover,
+.why-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 18px 40px rgba(21,59,89,.08);
 }
 
 .service-icon{
-font-size:40px;
-margin-bottom:15px;
+  width:55px;
+  height:55px;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#e7f7f6;
+  color:#0b8f8f;
+  font-size:25px;
+  margin-bottom:20px;
 }
 
-.service h3{
-margin-bottom:10px;
-color:var(--primary);
+.service-card h3,
+.why-card h3{
+  margin-bottom:10px;
 }
 
-.service p{
-color:var(--text);
-font-size:14px;
+.service-card p,
+.why-card p,
+.testimonial p{
+  color:#718596;
+  font-size:14px;
 }
 
 /* ABOUT */
 
-.about{
-background:white;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
 }
 
-.about-image img{
-border-radius:15px;
-width:100%;
-height:450px;
-object-fit:cover;
+.about-box{
+  background:linear-gradient(135deg,#e8f8f7,#f7fbfb);
+  border-radius:25px;
+  min-height:400px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px;
 }
 
-.about-content h2{
-font-size:40px;
-margin-bottom:20px;
+.about-box strong{
+  display:block;
+  font-size:80px;
+  line-height:1;
+  color:#0b8f8f;
 }
 
-.about-content h2 span{
-color:var(--primary);
+.about-content small,
+.contact-info small,
+.doctor-content small{
+  color:#0b8f8f;
+  font-weight:800;
 }
 
-.about-content p{
-color:var(--text);
-margin-bottom:20px;
+.about-content h2,
+.contact-info h2{
+  font-size:40px;
+  line-height:1.15;
+  margin:10px 0 20px;
+}
+
+.about-content p,
+.contact-info p{
+  color:#687f90;
+  margin-bottom:18px;
+}
+
+.check-list{
+  list-style:none;
+  display:grid;
+  gap:10px;
+  margin-top:25px;
+}
+
+.check-list li{
+  font-weight:600;
+}
+
+.check-list li::before{
+  content:"✓";
+  color:#0b8f8f;
+  margin-right:10px;
 }
 
 /* DOCTOR */
 
 .doctor-card{
-max-width:850px;
-margin:auto;
-display:grid;
-grid-template-columns:300px 1fr;
-background:white;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 10px 35px rgba(0,0,0,.08);
+  max-width:850px;
+  margin:auto;
+  background:#fff;
+  border:1px solid #e7eef2;
+  border-radius:22px;
+  padding:40px;
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:35px;
+  align-items:center;
 }
 
-.doctor-card img{
-width:100%;
-height:100%;
-object-fit:cover;
+.doctor-photo{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#d8f3f2,#eefafa);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:65px;
+  color:#0b8f8f;
 }
 
-.doctor-info{
-padding:40px;
+.doctor-content h3{
+  font-size:30px;
+  margin:7px 0;
 }
 
-.doctor-info h2{
-color:var(--primary);
-margin-bottom:5px;
+.doctor-content p{
+  color:#6c8292;
 }
 
-.doctor-info h4{
-color:var(--secondary);
-margin-bottom:20px;
-}
+/* WHY */
 
-/* WHY US */
-
-.why{
-background:var(--dark);
-color:white;
-}
-
-.why .section-title span{
-color:var(--secondary);
-}
-
-.why-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.why-card{
-padding:25px;
-text-align:center;
-}
-
-.why-card .icon{
-font-size:38px;
-margin-bottom:10px;
+.why-number{
+  color:#d2a64a;
+  font-weight:800;
+  margin-bottom:14px;
 }
 
 /* TESTIMONIALS */
 
-.testimonials{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-}
-
-.testimonial{
-background:white;
-padding:30px;
-border-radius:12px;
-}
-
 .stars{
-color:#e0ad42;
-margin-bottom:15px;
+  color:#d2a64a;
+  margin-bottom:15px;
+  letter-spacing:2px;
 }
 
 .testimonial p{
-color:var(--text);
-font-style:italic;
-}
-
-.patient{
-margin-top:15px;
-font-weight:bold;
-color:var(--primary);
+  margin-bottom:18px;
 }
 
 /* CONTACT */
 
-.contact{
-background:var(--primary);
-color:white;
-}
-
-.contact .section-title span{
-color:#f4cf7c;
-}
-
 .contact-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-max-width:1000px;
-margin:auto;
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:45px;
+  align-items:start;
 }
 
-.contact-info h3{
-margin-bottom:20px;
-font-size:24px;
+.contact-details{
+  display:grid;
+  gap:14px;
 }
 
-.contact-info p{
-margin:12px 0;
+.contact-detail{
+  padding:16px;
+  background:#f7fbfc;
+  border-radius:12px;
+  border:1px solid #e6eef2;
 }
 
-.form{
-background:white;
-padding:30px;
-border-radius:12px;
+.contact-detail strong{
+  display:block;
 }
 
-input,
-textarea{
-width:100%;
-padding:14px;
-margin-bottom:15px;
-border:1px solid #ddd;
-border-radius:6px;
-font-size:15px;
+.contact-detail span{
+  color:#718596;
+  font-size:14px;
 }
 
-textarea{
-height:120px;
-resize:none;
+.form-card{
+  border:1px solid #e4edf1;
+  border-radius:20px;
+  padding:32px;
+  box-shadow:0 18px 50px rgba(21,59,89,.06);
 }
 
-.form .btn{
-width:100%;
+.form-card h3{
+  margin-bottom:20px;
+  font-size:25px;
 }
 
-/* FORM STATUS */
+.form-group{
+  margin-bottom:16px;
+}
 
-.form-status{
-margin-top:15px;
-text-align:center;
-font-weight:bold;
-font-size:14px;
-display:none;
+.form-group label{
+  display:block;
+  margin-bottom:7px;
+  font-weight:700;
+  font-size:13px;
+}
+
+.form-group input,
+.form-group textarea{
+  width:100%;
+  border:1px solid #dce7ec;
+  border-radius:10px;
+  padding:13px 14px;
+  outline:none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+  border-color:#0b8f8f;
+}
+
+.form-group textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+.form-submit{
+  width:100%;
+}
+
+#formStatus{
+  margin-top:12px;
+  text-align:center;
+  font-size:13px;
+  min-height:20px;
 }
 
 /* FOOTER */
 
 footer{
-background:#0b1417;
-color:#aaa;
-text-align:center;
-padding:40px 20px;
+  background:#12324c;
+  color:#fff;
+  padding:35px 0;
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
 }
 
 .footer-logo{
-font-size:28px;
-letter-spacing:5px;
-color:white;
-margin-bottom:15px;
+  font-size:23px;
+  font-weight:800;
 }
 
 .footer-logo span{
-color:var(--secondary);
+  color:#d2a64a;
+}
+
+.footer-copy{
+  color:#aec0cc;
+  font-size:13px;
 }
 
 /* WHATSAPP */
 
 .whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-width:60px;
-height:60px;
-background:#25D366;
-color:white;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:28px;
-z-index:2000;
-box-shadow:0 5px 20px rgba(0,0,0,.25);
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#25D366;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  box-shadow:0 10px 25px rgba(0,0,0,.18);
+  z-index:999;
 }
 
 /* MOBILE */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
-nav{
-padding:0 20px;
+  .nav-links{
+    display:none;
+  }
+
+  .mobile-menu{
+    display:block;
+  }
+
+  .trust-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .services-grid,
+  .why-grid,
+  .testimonial-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .about-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .doctor-card{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .doctor-photo{
+    margin:auto;
+  }
 }
 
-.nav-links a{
-display:none;
-}
+@media(max-width:620px){
 
-.hero{
-padding:60px 25px;
-min-height:75vh;
-background:
-linear-gradient(90deg,
-rgba(247,245,240,.95),
-rgba(247,245,240,.75)),
-url('https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1600&q=80');
-background-size:cover;
-}
+  .hero-content{
+    padding:65px 0;
+  }
 
-.hero h1{
-font-size:42px;
-}
+  .hero h1{
+    font-size:42px;
+  }
 
-.section{
-padding:65px 20px;
-}
+  section{
+    padding:65px 0;
+  }
 
-.section-title{
-font-size:32px;
-}
+  .trust-grid,
+  .services-grid,
+  .why-grid,
+  .testimonial-grid{
+    grid-template-columns:1fr;
+  }
 
-.about{
-grid-template-columns:1fr;
-}
+  .hero-buttons{
+    flex-direction:column;
+  }
 
-.about-image img{
-height:300px;
-}
+  .hero-buttons .btn{
+    width:100%;
+  }
 
-.doctor-card{
-grid-template-columns:1fr;
-}
+  .about-content h2,
+  .contact-info h2{
+    font-size:32px;
+  }
 
-.doctor-card img{
-height:350px;
-}
+  .form-card{
+    padding:23px;
+  }
 
-.contact-grid{
-grid-template-columns:1fr;
+  .footer-inner{
+    flex-direction:column;
+    text-align:center;
+  }
 }
-
-.trust{
-gap:25px;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
+<header>
+<div class="container navbar">
+
+<a href="#" class="logo">NOVO<span>.</span></a>
+
 <nav>
-
-<div class="logo">
-NO<span>VO</span>
-</div>
-
-<div class="nav-links">
-
-<a href="#services" id="navServices">Services</a>
-
-<a href="#about" id="navAbout">About</a>
-
-<a href="#doctor" id="navDoctor">Doctor</a>
-
-<a href="#contact" id="navContact">Contact</a>
-
-<button class="lang-btn"
-onclick="toggleLanguage()"
-id="languageButton">
-عربي
-</button>
-
-</div>
-
+<ul class="nav-links">
+<li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+<li><a href="#services" data-en="Services" data-ar="خدماتنا">Services</a></li>
+<li><a href="#about" data-en="About" data-ar="عن العيادة">About</a></li>
+<li><a href="#doctor" data-en="Doctor" data-ar="الطبيب">Doctor</a></li>
+<li><a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a></li>
+</ul>
 </nav>
 
-
-<section class="hero">
-
-<div class="hero-content">
-
-<div class="hero-tag" id="heroTag">
-MODERN DENTISTRY
+<div class="nav-actions">
+<button class="language-btn" id="languageBtn">العربية</button>
+<button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
 </div>
 
-<h1 id="heroTitle">
-Your Smile.<br>
-<span>Our Passion.</span>
+</div>
+</header>
+
+
+<main>
+
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-content">
+
+<div class="eyebrow"
+data-en="MODERN DENTAL CARE"
+data-ar="رعاية أسنان عصرية">
+MODERN DENTAL CARE
+</div>
+
+<h1>
+<span data-en="Your Smile." data-ar="ابتسامتك.">Your Smile.</span>
+<br>
+<span data-en="Our Passion." data-ar="شغفنا.">Our Passion.</span>
 </h1>
 
-<p id="heroText">
-Modern dental care designed around you.
-At NOVO Dental Clinic, we combine advanced technology with gentle, personalized care.
+<p
+data-en="Professional dental care designed around your comfort, confidence, and long-term oral health."
+data-ar="رعاية أسنان احترافية مصممة حول راحتك وثقتك وصحة فمك على المدى الطويل.">
+Professional dental care designed around your comfort, confidence, and long-term oral health.
 </p>
 
 <div class="hero-buttons">
 
 <a href="#contact"
-class="btn"
-id="bookButton">
-BOOK AN APPOINTMENT
+class="btn btn-primary"
+data-en="Book an Appointment"
+data-ar="احجز موعدك">
+Book an Appointment
 </a>
 
 <a href="#services"
-class="btn btn-gold"
-id="servicesButton">
-OUR SERVICES
+class="btn btn-outline"
+data-en="Explore Services"
+data-ar="اكتشف خدماتنا">
+Explore Services
 </a>
 
 </div>
-
 </div>
-
+</div>
 </section>
 
 
-<section class="trust">
+<div class="trust-bar">
+<div class="container trust-grid">
 
 <div class="trust-item">
-<h3>10+</h3>
-<p id="trust1">Years of Experience</p>
+<strong data-en="Modern Care" data-ar="رعاية عصرية">Modern Care</strong>
+<span data-en="Advanced dental solutions" data-ar="حلول أسنان متطورة">Advanced dental solutions</span>
 </div>
 
 <div class="trust-item">
-<h3>5,000+</h3>
-<p id="trust2">Happy Patients</p>
+<strong data-en="Patient First" data-ar="المريض أولاً">Patient First</strong>
+<span data-en="Comfort at every visit" data-ar="راحتك في كل زيارة">Comfort at every visit</span>
 </div>
 
 <div class="trust-item">
-<h3>4.9 ★</h3>
-<p id="trust3">Patient Rating</p>
+<strong data-en="Experienced" data-ar="خبرة">Experienced</strong>
+<span data-en="Professional dental care" data-ar="رعاية أسنان احترافية">Professional dental care</span>
 </div>
 
 <div class="trust-item">
-<h3>100%</h3>
-<p id="trust4">Patient Focused Care</p>
+<strong data-en="Personalized" data-ar="رعاية شخصية">Personalized</strong>
+<span data-en="Treatment made for you" data-ar="خطة علاج تناسبك">Treatment made for you</span>
 </div>
 
-</section>
+</div>
+</div>
 
 
-<section class="section" id="services">
+<section class="services" id="services">
 
-<h2 class="section-title" id="servicesTitle">
-Our <span>Services</span>
+<div class="container">
+
+<div class="section-heading">
+
+<small data-en="OUR SERVICES" data-ar="خدماتنا">OUR SERVICES</small>
+
+<h2
+data-en="Complete Dental Care Under One Roof"
+data-ar="رعاية متكاملة لأسنانك في مكان واحد">
+Complete Dental Care Under One Roof
 </h2>
 
-<p class="section-desc" id="servicesDesc">
-Comprehensive dental care for a healthier, more confident smile.
+<p
+data-en="From preventive care to cosmetic and restorative treatments, we focus on healthy, confident smiles."
+data-ar="من الوقاية إلى التجميل والعلاجات الترميمية، نهتم بصحة أسنانك وابتسامتك بثقة.">
+From preventive care to cosmetic and restorative treatments, we focus on healthy, confident smiles.
 </p>
 
-<div class="services">
-
-<div class="service">
-<div class="service-icon">😁</div>
-<h3 id="service1Title">Cosmetic Dentistry</h3>
-<p id="service1Text">
-Transform your smile with modern cosmetic treatments.
-</p>
 </div>
 
-<div class="service">
+
+<div class="services-grid">
+
+<div class="service-card">
 <div class="service-icon">🦷</div>
-<h3 id="service2Title">Dental Implants</h3>
-<p id="service2Text">
-Restore missing teeth with natural-looking implants.
+<h3 data-en="General Dentistry" data-ar="طب الأسنان العام">General Dentistry</h3>
+<p data-en="Routine examinations, cleanings, fillings, and preventive dental care."
+data-ar="الفحوصات الدورية والتنظيف والحشوات والرعاية الوقائية للأسنان.">
+Routine examinations, cleanings, fillings, and preventive dental care.
 </p>
 </div>
 
-<div class="service">
+<div class="service-card">
 <div class="service-icon">✨</div>
-<h3 id="service3Title">Teeth Whitening</h3>
-<p id="service3Text">
-Professional whitening for a brighter smile.
+<h3 data-en="Cosmetic Dentistry" data-ar="تجميل الأسنان">Cosmetic Dentistry</h3>
+<p data-en="Smile-focused treatments designed to improve the appearance of your teeth."
+data-ar="علاجات مخصصة لتحسين مظهر الأسنان والحصول على ابتسامة أكثر إشراقًا.">
+Smile-focused treatments designed to improve the appearance of your teeth.
 </p>
 </div>
 
-<div class="service">
-<div class="service-icon">🪥</div>
-<h3 id="service4Title">General Dentistry</h3>
-<p id="service4Text">
-Routine care to keep your teeth healthy and strong.
+<div class="service-card">
+<div class="service-icon">😁</div>
+<h3 data-en="Teeth Whitening" data-ar="تبييض الأسنان">Teeth Whitening</h3>
+<p data-en="Professional whitening solutions for a brighter and more confident smile."
+data-ar="حلول احترافية لتبييض الأسنان للحصول على ابتسامة أكثر إشراقًا وثقة.">
+Professional whitening solutions for a brighter and more confident smile.
+</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🩺</div>
+<h3 data-en="Dental Implants" data-ar="زراعة الأسنان">Dental Implants</h3>
+<p data-en="Modern solutions for replacing missing teeth and restoring function."
+data-ar="حلول حديثة لتعويض الأسنان المفقودة واستعادة وظيفة الفم.">
+Modern solutions for replacing missing teeth and restoring function.
+</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🦷</div>
+<h3 data-en="Root Canal Treatment" data-ar="علاج جذور الأسنان">Root Canal Treatment</h3>
+<p data-en="Careful treatment designed to relieve pain and preserve your natural tooth."
+data-ar="علاج دقيق لتخفيف الألم والحفاظ على الأسنان الطبيعية قدر الإمكان.">
+Careful treatment designed to relieve pain and preserve your natural tooth.
+</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">👶</div>
+<h3 data-en="Children's Dentistry" data-ar="طب أسنان الأطفال">Children's Dentistry</h3>
+<p data-en="Friendly dental care that helps children build healthy habits from an early age."
+data-ar="رعاية لطيفة تساعد الأطفال على بناء عادات صحية لأسنانهم منذ الصغر.">
+Friendly dental care that helps children build healthy habits from an early age.
 </p>
 </div>
 
 </div>
-
+</div>
 </section>
 
 
-<section class="section about" id="about">
+<section id="about">
 
-<div class="about-image">
+<div class="container about-grid">
 
-<img
-src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80"
-alt="NOVO Dental Clinic">
-
+<div class="about-box">
+<div>
+<strong>+</strong>
+<h3 data-en="A better dental experience" data-ar="تجربة أفضل لعلاج الأسنان">
+A better dental experience
+</h3>
+<p data-en="Modern technology. Personal attention. Honest care."
+data-ar="تكنولوجيا حديثة. اهتمام شخصي. رعاية صادقة.">
+Modern technology. Personal attention. Honest care.
+</p>
 </div>
+</div>
+
 
 <div class="about-content">
 
-<h2 id="aboutTitle">
-A Better <span>Dental Experience.</span>
+<small data-en="ABOUT NOVO" data-ar="عن NOVO">ABOUT NOVO</small>
+
+<h2 data-en="Dental Care Built Around You"
+data-ar="رعاية أسنان مصممة من أجلك">
+Dental Care Built Around You
 </h2>
 
-<p id="aboutText1">
-We believe visiting the dentist should feel comfortable, calm and personal.
+<p data-en="At NOVO Dental Clinic, we believe dental care should be professional, comfortable, and easy to understand."
+data-ar="في NOVO Dental Clinic نؤمن أن رعاية الأسنان يجب أن تكون احترافية ومريحة وسهلة الفهم.">
+At NOVO Dental Clinic, we believe dental care should be professional, comfortable, and easy to understand.
 </p>
 
-<p id="aboutText2">
-Our clinic combines modern technology, experienced professionals and patient-focused care to give you the confidence to smile again.
+<p data-en="Our approach combines modern techniques with personal attention to help every patient feel confident throughout their treatment."
+data-ar="نجمع بين التقنيات الحديثة والاهتمام الشخصي لمساعدة كل مريض على الشعور بالثقة والراحة طوال فترة العلاج.">
+Our approach combines modern techniques with personal attention to help every patient feel confident throughout their treatment.
 </p>
 
-<a href="#contact"
-class="btn"
-id="aboutButton">
-MEET OUR TEAM
-</a>
+<ul class="check-list">
+<li data-en="Clear treatment plans" data-ar="خطط علاج واضحة">Clear treatment plans</li>
+<li data-en="Comfort-focused care" data-ar="رعاية تركز على راحتك">Comfort-focused care</li>
+<li data-en="Modern dental technology" data-ar="تكنولوجيا أسنان حديثة">Modern dental technology</li>
+</ul>
 
 </div>
-
+</div>
 </section>
 
 
-<section class="section" id="doctor">
+<section class="doctor-section" id="doctor">
 
-<h2 class="section-title" id="doctorSectionTitle">
-Meet Your <span>Dentist</span>
+<div class="container">
+
+<div class="section-heading">
+<small data-en="YOUR DENTIST" data-ar="طبيب الأسنان">YOUR DENTIST</small>
+
+<h2 data-en="Professional Care You Can Trust"
+data-ar="رعاية احترافية يمكنك الوثوق بها">
+Professional Care You Can Trust
 </h2>
+</div>
+
 
 <div class="doctor-card">
 
-<img
-src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80"
-alt="Dentist">
+<div class="doctor-photo">+</div>
 
-<div class="doctor-info">
+<div class="doctor-content">
 
-<h2 id="doctorName">
-Dr. Olivia Morgan
-</h2>
+<small data-en="DENTAL SPECIALIST" data-ar="طبيب أسنان متخصص">
+DENTAL SPECIALIST
+</small>
 
-<h4 id="doctorSpecialty">
-Cosmetic & Restorative Dentist
-</h4>
+<h3 data-en="Dr. NOVO" data-ar="د. NOVO">Dr. NOVO</h3>
 
-<p id="doctorText">
-With years of experience in modern dentistry, Dr. Olivia is passionate about helping patients achieve healthy and confident smiles.
+<p data-en="Dedicated to providing thoughtful, modern dental care with a strong focus on patient comfort and natural-looking results."
+data-ar="متخصص في تقديم رعاية أسنان حديثة باهتمام كبير براحة المريض والحصول على نتائج طبيعية.">
+Dedicated to providing thoughtful, modern dental care with a strong focus on patient comfort and natural-looking results.
 </p>
 
 </div>
-
 </div>
-
+</div>
 </section>
 
 
-<section class="section why">
+<section>
 
-<h2 class="section-title" id="whyTitle">
-Why Choose <span>NOVO?</span>
+<div class="container">
+
+<div class="section-heading">
+
+<small data-en="WHY NOVO" data-ar="لماذا NOVO">WHY NOVO</small>
+
+<h2 data-en="A Simpler, Better Dental Experience"
+data-ar="تجربة أسنان أبسط وأفضل">
+A Simpler, Better Dental Experience
 </h2>
+
+</div>
+
 
 <div class="why-grid">
 
 <div class="why-card">
-
-<div class="icon">🔬</div>
-
-<h3 id="why1Title">
-Modern Technology
-</h3>
-
-<p id="why1Text">
-Advanced equipment for precise and comfortable treatment.
+<div class="why-number">01</div>
+<h3 data-en="Listen First" data-ar="نستمع أولاً">Listen First</h3>
+<p data-en="We start by understanding your concerns and goals."
+data-ar="نبدأ بفهم مشاكلك واحتياجاتك وأهدافك.">
+We start by understanding your concerns and goals.
 </p>
-
 </div>
 
 <div class="why-card">
-
-<div class="icon">🤍</div>
-
-<h3 id="why2Title">
-Gentle Care
-</h3>
-
-<p id="why2Text">
-We make every visit comfortable and stress-free.
+<div class="why-number">02</div>
+<h3 data-en="Explain Clearly" data-ar="نشرح بوضوح">Explain Clearly</h3>
+<p data-en="We explain your treatment options in a simple and transparent way."
+data-ar="نشرح لك خيارات العلاج بطريقة بسيطة وواضحة.">
+We explain your treatment options in a simple and transparent way.
 </p>
-
 </div>
 
 <div class="why-card">
-
-<div class="icon">👩‍⚕️</div>
-
-<h3 id="why3Title">
-Expert Team
-</h3>
-
-<p id="why3Text">
-Experienced professionals focused on your smile.
+<div class="why-number">03</div>
+<h3 data-en="Care Personally" data-ar="نهتم بك شخصيًا">Care Personally</h3>
+<p data-en="Every treatment plan is designed around your individual needs."
+data-ar="كل خطة علاج يتم تصميمها وفقًا لاحتياجاتك الخاصة.">
+Every treatment plan is designed around your individual needs.
 </p>
-
-</div>
-
-<div class="why-card">
-
-<div class="icon">📅</div>
-
-<h3 id="why4Title">
-Easy Booking
-</h3>
-
-<p id="why4Text">
-Book your appointment quickly and easily.
-</p>
-
 </div>
 
 </div>
-
+</div>
 </section>
 
 
-<section class="section">
+<section class="testimonials">
 
-<h2 class="section-title" id="reviewsTitle">
-What Our <span>Patients Say</span>
+<div class="container">
+
+<div class="section-heading">
+
+<small data-en="PATIENT EXPERIENCE" data-ar="تجربة المرضى">
+PATIENT EXPERIENCE
+</small>
+
+<h2 data-en="What Our Patients Say"
+data-ar="ماذا يقول مرضاؤنا">
+What Our Patients Say
 </h2>
 
-<div class="testimonials">
-
-<div class="testimonial">
-
-<div class="stars">★★★★★</div>
-
-<p id="review1">
-"The best dental experience I've ever had. Professional, friendly and completely pain-free."
-</p>
-
-<div class="patient">
-— Sarah M.
 </div>
 
+
+<div class="testimonial-grid">
+
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+<p data-en="A comfortable experience from the first consultation. Everything was explained clearly."
+data-ar="تجربة مريحة من أول استشارة، وكل شيء تم شرحه بشكل واضح.">
+A comfortable experience from the first consultation. Everything was explained clearly.
+</p>
+<strong data-en="NOVO Patient" data-ar="أحد مرضى NOVO">NOVO Patient</strong>
 </div>
 
 <div class="testimonial">
-
 <div class="stars">★★★★★</div>
-
-<p id="review2">
-"Beautiful clinic and an amazing team. I finally feel confident about my smile."
+<p data-en="Professional service and a very friendly atmosphere. I felt comfortable throughout the visit."
+data-ar="خدمة احترافية وأجواء ودودة جدًا. شعرت بالراحة طوال الزيارة.">
+Professional service and a very friendly atmosphere. I felt comfortable throughout the visit.
 </p>
-
-<div class="patient">
-— Michael R.
-</div>
-
+<strong data-en="NOVO Patient" data-ar="أحد مرضى NOVO">NOVO Patient</strong>
 </div>
 
 <div class="testimonial">
-
 <div class="stars">★★★★★</div>
-
-<p id="review3">
-"Everything was explained clearly and the whole experience was incredibly comfortable."
+<p data-en="Modern clinic, clear communication, and attention to detail."
+data-ar="عيادة حديثة وتواصل واضح واهتمام بالتفاصيل.">
+Modern clinic, clear communication, and attention to detail.
 </p>
-
-<div class="patient">
-— Emma L.
+<strong data-en="NOVO Patient" data-ar="أحد مرضى NOVO">NOVO Patient</strong>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-<section class="section contact" id="contact">
+<section id="contact">
 
-<h2 class="section-title" id="contactTitle">
-Book Your <span>Appointment</span>
-</h2>
-
-<p class="section-desc" id="contactDesc">
-Ready for a healthier smile? Contact us today.
-</p>
-
-<div class="contact-grid">
+<div class="container contact-grid">
 
 <div class="contact-info">
 
-<h3 id="visitTitle">
-Visit NOVO Dental
-</h3>
-
-<p>
-📍 <span id="address">
-123 Modern Street, Your City
-</span>
-</p>
-
-<p>
-📞 +20 100 000 0000
-</p>
-
-<p>
-✉ hello@novodental.com
-</p>
-
-<p>
-🕒 <span id="hours">
-Sat - Thu | 10:00 AM - 9:00 PM
-</span>
-</p>
-
-</div>
-
-
-<div class="form">
-
-<form id="appointmentForm">
-
-<input
-type="text"
-id="name"
-placeholder="Your Name"
-required>
-
-<input
-type="tel"
-id="phone"
-placeholder="Phone Number"
-required>
-
-<textarea
-id="message"
-placeholder="How can we help you?">
-</textarea>
-
-<button
-type="submit"
-class="btn"
-id="sendButton">
-REQUEST APPOINTMENT
-</button>
-
-<div
-class="form-status"
-id="formStatus">
-</div>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
-
-<div class="footer-logo">
-NO<span>VO</span>
-</div>
-
-<p id="footerText">
-Modern Dentistry. Confident Smiles.
-</p>
-
-<br>
-
-<p>
-© 2026 NOVO Dental Clinic. Demo Website by ATHAR.
-</p>
-
-</footer>
-
-
-<a
-href="https://wa.me/201289122717"
-target="_blank"
-class="whatsapp">
-💬
-</a>
-
-
-<script>
-
-/* =========================
-   GOOGLE APPS SCRIPT
-========================= */
-
-const SCRIPT_URL =
-"https://script.google.com/macros/s/AKfycbx73A8KDTejluE0B0o84mz06edwWEi3DAOtJfymw8yd8VtBqaRetJDKoTjpYMkl_RJr/exec";
-
-
-/* =========================
-   LANGUAGE
-========================= */
-
-let currentLanguage = "en";
-
-
-const english = {
-
-navServices:"Services",
-navAbout:"About",
-navDoctor:"Doctor",
-navContact:"Contact",
-
-heroTag:"MODERN DENTISTRY",
-
-heroTitle:'Your Smile.<br><span>Our Passion.</span>',
-
-heroText:
-"Modern dental care designed around you. At NOVO Dental Clinic, we combine advanced technology with gentle, personalized care.",
-
-bookButton:"BOOK AN APPOINTMENT",
-
-servicesButton:"OUR SERVICES",
-
-trust1:"Years of Experience",
-trust2:"Happy Patients",
-trust3:"Patient Rating",
-trust4:"Patient Focused Care",
-
-servicesTitle:'Our <span>Services</span>',
-
-servicesDesc:
-"Comprehensive dental care for a healthier, more confident smile.",
-
-service1Title:"Cosmetic Dentistry",
-service1Text:
-"Transform your smile with modern cosmetic treatments.",
-
-service2Title:"Dental Implants",
-service2Text:
-"Restore missing teeth with natural-looking implants.",
-
-service3Title:"Teeth Whitening",
-service3Text:
-"Professional whitening for a brighter smile.",
-
-service4Title:"General Dentistry",
-service4Text:
-"Routine care to keep your teeth healthy and strong.",
-
-aboutTitle:
-'A Better <span>Dental Experience.</span>',
-
-aboutText1:
-"We believe visiting the dentist should feel comfortable, calm and personal.",
-
-aboutText2:
-"Our clinic combines modern technology, experienced professionals and patient-focused care to give you the confidence to smile again.",
-
-aboutButton:"MEET OUR TEAM",
-
-doctorSectionTitle:
-'Meet Your <span>Dentist</span>',
-
-doctorName:"Dr. Olivia Morgan",
-
-doctorSpecialty:
-"Cosmetic & Restorative Dentist",
-
-doctorText:
-"With years of experience in modern dentistry, Dr. Olivia is passionate about helping patients achieve healthy and confident smiles.",
-
-whyTitle:
-'Why Choose <span>NOVO?</span>',
-
-why1Title:"Modern Technology",
-why1Text:
-"Advanced equipment for precise and comfortable treatment.",
-
-why2Title:"Gentle Care",
-why2Text:
-"We make every visit comfortable and stress-free.",
-
-why3Title:"Expert Team",
-why3Text:
-"Experienced professionals focused on your smile.",
-
-why4Title:"Easy Booking",
-why4Text:
-"Book your appointment quickly and easily.",
-
-reviewsTitle:
-'What Our <span>Patients Say</span>',
-
-review1:
-'"The best dental experience I\'ve ever had. Professional, friendly and completely pain-free."',
-
-review2:
-'"Beautiful clinic and an amazing team. I finally feel confident about my smile."',
-
-review3:
-'"Everything was explained clearly and the whole experience was incredibly comfortable."',
-
-contactTitle:
-'Book Your <span>Appointment</span>',
-
-contactDesc:
-"Ready for a healthier smile? Contact us today.",
-
-visitTitle:
-"Visit NOVO Dental",
-
-address:
-"123 Modern Street, Your City",
-
-hours:
-"Sat - Thu | 10:00 AM - 9:00 PM",
-
-sendButton:
-"REQUEST APPOINTMENT",
-
-footerText:
-"Modern Dentistry. Confident Smiles."
-
-};
-
-
-const arabic = {
-
-navServices:"الخدمات",
-navAbout:"عن العيادة",
-navDoctor:"الطبيب",
-navContact:"تواصل",
-
-heroTag:"طب أسنان حديث",
-
-heroTitle:
-'ابتسامتك.<br><span>شغفنا.</span>',
-
-heroText:
-"رعاية أسنان حديثة مصممة من أجلك. في عيادة NOVO نجمع بين التكنولوجيا الحديثة والرعاية الشخصية الهادئة.",
-
-bookButton:"احجز موعدًا",
-
-servicesButton:"خدماتنا",
-
-trust1:"سنوات من الخبرة",
-trust2:"مريض سعيد",
-trust3:"تقييم المرضى",
-trust4:"رعاية تركز على المريض",
-
-servicesTitle:
-'خدماتنا <span>الطبية</span>',
-
-servicesDesc:
-"رعاية متكاملة لأسنان صحية وابتسامة أكثر ثقة.",
-
-service1Title:
-"تجميل الأسنان",
-
-service1Text:
-"غيّر ابتسامتك بأحدث تقنيات تجميل الأسنان.",
-
-service2Title:
-"زراعة الأسنان",
-
-service2Text:
-"استعادة الأسنان المفقودة بزراعة طبيعية المظهر.",
-
-service3Title:
-"تبييض الأسنان",
-
-service3Text:
-"تبييض احترافي للحصول على ابتسامة أكثر إشراقًا.",
-
-service4Title:
-"طب الأسنان العام",
-
-service4Text:
-"رعاية دورية للحفاظ على صحة وقوة أسنانك.",
-
-aboutTitle:
-'تجربة أسنان <span>أفضل.</span>',
-
-aboutText1:
-"نؤمن أن زيارة طبيب الأسنان يجب أن تكون مريحة وهادئة وشخصية.",
-
-aboutText2:
-"تجمع عيادتنا بين التكنولوجيا الحديثة والخبرة والرعاية التي تركز على المريض لتمنحك الثقة في ابتسامتك.",
-
-aboutButton:
-"تعرف على فريقنا",
-
-doctorSectionTitle:
-'تعرف على <span>طبيبك</span>',
-
-doctorName:
-"د. أوليفيا مورغان",
-
-doctorSpecialty:
-"طبيبة تجميل وترميم الأسنان",
-
-doctorText:
-"بخبرة واسعة في طب الأسنان الحديث، تهتم د. أوليفيا بمساعدة المرضى للحصول على ابتسامات صحية وواثقة.",
-
-whyTitle:
-'لماذا تختار <span>NOVO؟</span>',
-
-why1Title:
-"تكنولوجيا حديثة",
-
-why1Text:
-"أجهزة متطورة لعلاج دقيق ومريح.",
-
-why2Title:
-"رعاية لطيفة",
-
-why2Text:
-"نجعل كل زيارة مريحة وخالية من التوتر.",
-
-why3Title:
-"فريق متخصص",
-
-why3Text:
-"خبراء يهتمون بصحة وابتسامة كل مريض.",
-
-why4Title:
-"حجز سهل",
-
-why4Text:
-"احجز موعدك بسرعة وسهولة.",
-
-reviewsTitle:
-'ماذا يقول <span>مرضانا</span>',
-
-review1:
-'"أفضل تجربة أسنان مررت بها. احترافية وودودة ومريحة للغاية."',
-
-review2:
-'"عيادة جميلة وفريق رائع. أصبحت أشعر بثقة أكبر في ابتسامتي."',
-
-review3:
-'"تم شرح كل شيء بوضوح وكانت التجربة مريحة جدًا."',
-
-contactTitle:
-'احجز <span>موعدك</span>',
-
-contactDesc:
-"هل أنت مستعد لابتسامة أكثر صحة؟ تواصل معنا اليوم.",
-
-visitTitle:
-"زيارة عيادة NOVO",
-
-address:
-"123 شارع مودرن، مدينتك",
-
-hours:
-"السبت - الخميس | 10 صباحًا - 9 مساءً",
-
-sendButton:
-"طلب حجز موعد",
-
-footerText:
-"طب أسنان حديث. ابتسامات واثقة."
-
-};
-
-
-/* =========================
-   LANGUAGE FUNCTION
-========================= */
-
-function toggleLanguage(){
-
-currentLanguage =
-currentLanguage === "en" ? "ar" : "en";
-
-const data =
-currentLanguage === "en"
-? english
-: arabic;
-
-document.documentElement.lang =
-currentLanguage;
-
-document.documentElement.dir =
-currentLanguage === "en"
-? "ltr"
-: "rtl";
-
-document.body.style.direction =
-currentLanguage === "en"
-? "ltr"
-: "rtl";
-
-document.getElementById("languageButton").innerText =
-currentLanguage === "en"
-? "عربي"
-: "EN";
-
-
-for(let key in data){
-
-const element =
-document.getElementById(key);
-
-if(element){
-
-element.innerHTML =
-data[key];
-
-}
-
-}
-
-
-if(currentLanguage === "ar"){
-
-document.getElementById("name").placeholder =
-"الاسم";
-
-document.getElementById("phone").placeholder =
-"رقم الهاتف";
-
-document.getElementById("message").placeholder =
-"كيف يمكننا مساعدتك؟";
-
-}else{
-
-document.getElementById("name").placeholder =
-"Your Name";
-
-document.getElementById("phone").placeholder =
-"Phone Number";
-
-document.getElementById("message").placeholder =
-"How can we help you?";
-
-}
-
-}
-
-
-/* =========================
-   APPOINTMENT FORM
-========================= */
-
-document
-.getElementById("appointmentForm")
-.addEventListener("submit", async function(e){
-
-e.preventDefault();
-
-
-const name =
-document.getElementById("name").value.trim();
-
-const phone =
-document.getElementById("phone").value.trim();
-
-const
+<small data-en="BOOK YOUR VISIT" data-ar="احجز زيارتك">
+BOOK YOUR VISIT
+</small>
+
+<h2 data-en="Let's Take Care of Y
