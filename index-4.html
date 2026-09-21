@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOVO Dental Clinic | Your Smile. Our Passion.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,sans-serif;color:#17324d;background:#fff;line-height:1.6}body.ar{font-family:Cairo,sans-serif;direction:rtl}a{text-decoration:none;color:inherit}button,input,textarea{font:inherit}.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid #e8eef3}.navbar{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-size:28px;font-weight:800;color:#0b8f8f}.logo span{color:#d2a64a}.nav-links{display:flex;gap:28px;list-style:none}.nav-links a{font-size:14px;font-weight:600;color:#36536b}.nav-links a:hover{color:#0b8f8f}.nav-actions{display:flex;align-items:center;gap:10px}.language-btn{border:1px solid #d9e5eb;background:#fff;padding:9px 13px;border-radius:9px;cursor:pointer;font-weight:700}.mobile-menu{display:none;border:0;background:transparent;font-size:26px;cursor:pointer}
+.hero{min-height:650px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(255,255,255,.97),rgba(255,255,255,.78)),radial-gradient(circle at 80% 30%,#d8f3f2,transparent 35%),linear-gradient(135deg,#eefafa,#fff)}.hero-content{max-width:680px;padding:80px 0}.eyebrow{display:inline-block;color:#0b8f8f;background:#e6f7f6;padding:8px 14px;border-radius:50px;font-size:13px;font-weight:800;margin-bottom:18px}.hero h1{font-size:clamp(42px,6vw,70px);line-height:1.08;margin-bottom:22px;color:#153b59}.hero h1 span{color:#0b8f8f}.hero p{color:#60788d;font-size:18px;max-width:600px;margin-bottom:30px}.hero-buttons{display:flex;flex-wrap:wrap;gap:13px}.btn{border:0;cursor:pointer;border-radius:10px;padding:14px 22px;font-weight:700;transition:.25s;display:inline-flex;align-items:center;justify-content:center}.btn-primary{background:#0b8f8f;color:#fff}.btn-primary:hover{background:#087777;transform:translateY(-2px)}.btn-outline{border:1px solid #cbdde5;background:#fff;color:#17324d}
+.trust-bar{border-bottom:1px solid #e8eef3}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:25px 0}.trust-item{text-align:center}.trust-item strong{display:block;font-size:16px}.trust-item span{color:#7890a0;font-size:13px}section{padding:90px 0}.section-heading{text-align:center;max-width:720px;margin:0 auto 50px}.section-heading small{color:#0b8f8f;font-weight:800}.section-heading h2{margin:10px 0 14px;font-size:clamp(30px,4vw,46px);line-height:1.15}.section-heading p{color:#6b8192}
+.services,.doctor-section,.testimonials{background:#f8fbfc}.services-grid,.why-grid,.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.service-card,.why-card,.testimonial{background:#fff;border:1px solid #e7eef2;border-radius:18px;padding:30px;transition:.25s}.service-card:hover,.why-card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(21,59,89,.08)}.service-icon{width:55px;height:55px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:#e7f7f6;color:#0b8f8f;font-size:25px;margin-bottom:20px}.service-card h3,.why-card h3{margin-bottom:10px}.service-card p,.why-card p,.testimonial p{color:#718596;font-size:14px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.about-box{background:linear-gradient(135deg,#e8f8f7,#f7fbfb);border-radius:25px;min-height:400px;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px}.about-box strong{display:block;font-size:80px;line-height:1;color:#0b8f8f}.about-content small,.contact-info small,.doctor-content small{color:#0b8f8f;font-weight:800}.about-content h2,.contact-info h2{font-size:40px;line-height:1.15;margin:10px 0 20px}.about-content p,.contact-info p{color:#687f90;margin-bottom:18px}.check-list{list-style:none;display:grid;gap:10px;margin-top:25px}.check-list li{font-weight:600}.check-list li::before{content:"✓";color:#0b8f8f;margin-right:10px}
+.doctor-card{max-width:850px;margin:auto;background:#fff;border:1px solid #e7eef2;border-radius:22px;padding:40px;display:grid;grid-template-columns:180px 1fr;gap:35px;align-items:center}.doctor-photo{width:180px;height:180px;border-radius:50%;background:linear-gradient(135deg,#d8f3f2,#eefafa);display:flex;align-items:center;justify-content:center;font-size:65px;color:#0b8f8f}.doctor-content h3{font-size:30px;margin:7px 0}.doctor-content p{color:#6c8292}.why-number{color:#d2a64a;font-weight:800;margin-bottom:14px}.stars{color:#d2a64a;margin-bottom:15px;letter-spacing:2px}.testimonial p{margin-bottom:18px}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:45px;align-items:start}.contact-details{display:grid;gap:14px}.contact-detail{padding:16px;background:#f7fbfc;border-radius:12px;border:1px solid #e6eef2}.contact-detail strong{display:block}.contact-detail span{color:#718596;font-size:14px}.form-card{border:1px solid #e4edf1;border-radius:20px;padding:32px;box-shadow:0 18px 50px rgba(21,59,89,.06)}.form-card h3{margin-bottom:20px;font-size:25px}.form-group{margin-bottom:16px}.form-group label{display:block;margin-bottom:7px;font-weight:700;font-size:13px}.form-group input,.form-group textarea{width:100%;border:1px solid #dce7ec;border-radius:10px;padding:13px 14px;outline:none}.form-group input:focus,.form-group textarea:focus{border-color:#0b8f8f}.form-group textarea{min-height:120px;resize:vertical}.form-submit{width:100%}#formStatus{margin-top:12px;text-align:center;font-size:13px;min-height:20px}
+footer{background:#12324c;color:#fff;padding:35px 0}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-logo{font-size:23px;font-weight:800}.footer-logo span{color:#d2a64a}.footer-copy{color:#aec0cc;font-size:13px}.whatsapp{position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:25px;box-shadow:0 10px 25px rgba(0,0,0,.18);z-index:999}
+@media(max-width:900px){.nav-links{display:none}.mobile-menu{display:block}.trust-grid{grid-template-columns:repeat(2,1fr)}.services-grid,.why-grid,.testimonial-grid{grid-template-columns:1fr 1fr}.about-grid,.contact-grid{grid-template-columns:1fr}.doctor-card{grid-template-columns:1fr;text-align:center}.doctor-photo{margin:auto}}@media(max-width:620px){.hero-content{padding:65px 0}.hero h1{font-size:42px}section{padding:65px 0}.trust-grid,.services-grid,.why-grid,.testimonial-grid{grid-template-columns:1fr}.hero-buttons{flex-direction:column}.hero-buttons .btn{width:100%}.about-content h2,.contact-info h2{font-size:32px}.form-card{padding:23px}.footer-inner{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+<header><div class="container navbar"><a href="#home" class="logo">NOVO<span>.</span></a><nav><ul class="nav-links"><li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li><li><a href="#services" data-en="Services" data-ar="خدماتنا">Services</a></li><li><a href="#about" data-en="About" data-ar="عن العيادة">About</a></li><li><a href="#doctor" data-en="Doctor" data-ar="الطبيب">Doctor</a></li><li><a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a></li></ul></nav><div class="nav-actions"><button class="language-btn" id="languageBtn">العربية</button><button class="mobile-menu" onclick="toggleMobileMenu()">☰</button></div></div></header>
+<main>
+<section class="hero" id="home"><div class="container"><div class="hero-content"><div class="eyebrow" data-en="MODERN DENTAL CARE" data-ar="رعاية أسنان عصرية">MODERN DENTAL CARE</div><h1><span data-en="Your Smile." data-ar="ابتسامتك.">Your Smile.</span><br><span data-en="Our Passion." data-ar="شغفنا.">Our Passion.</span></h1><p data-en="Professional dental care designed around your comfort, confidence, and long-term oral health." data-ar="رعاية أسنان احترافية مصممة حول راحتك وثقتك وصحة فمك على المدى الطويل.">Professional dental care designed around your comfort, confidence, and long-term oral health.</p><div class="hero-buttons"><a href="#contact" class="btn btn-primary" data-en="Book an Appointment" data-ar="احجز موعدك">Book an Appointment</a><a href="#services" class="btn btn-outline" data-en="Explore Services" data-ar="اكتشف خدماتنا">Explore Services</a></div></div></div></section>
+<div class="trust-bar"><div class="container trust-grid"><div class="trust-item"><strong data-en="Modern Care" data-ar="رعاية عصرية">Modern Care</strong><span data-en="Advanced dental solutions" data-ar="حلول أسنان متطورة">Advanced dental solutions</span></div><div class="trust-item"><strong data-en="Patient First" data-ar="المريض أولاً">Patient First</strong><span data-en="Comfort at every visit" data-ar="راحتك في كل زيارة">Comfort at every visit</span></div><div class="trust-item"><strong data-en="Experienced" data-ar="خبرة">Experienced</strong><span data-en="Professional dental care" data-ar="رعاية أسنان احترافية">Professional dental care</span></div><div class="trust-item"><strong data-en="Personalized" data-ar="رعاية شخصية">Personalized</strong><span data-en="Treatment made for you" data-ar="خطة علاج تناسبك">Treatment made for you</span></div></div></div>
+<section class="services" id="services"><div class="container"><div class="section-heading"><small data-en="OUR SERVICES" data-ar="خدماتنا">OUR SERVICES</small><h2 data-en="Complete Dental Care Under One Roof" data-ar="رعاية متكاملة لأسنانك في مكان واحد">Complete Dental Care Under One Roof</h2><p data-en="From preventive care to cosmetic and restorative treatments, we focus on healthy, confident smiles." data-ar="من الوقاية إلى التجميل والعلاجات الترميمية، نهتم بصحة أسنانك وابتسامتك بثقة.">From preventive care to cosmetic and restorative treatments, we focus on healthy, confident smiles.</p></div><div class="services-grid"><div class="service-card"><div class="service-icon">🦷</div><h3 data-en="General Dentistry" data-ar="طب الأسنان العام">General Dentistry</h3><p data-en="Routine examinations, cleanings, fillings, and preventive dental care." data-ar="الفحوصات الدورية والتنظيف والحشوات والرعاية الوقائية للأسنان.">Routine examinations, cleanings, fillings, and preventive dental care.</p></div><div class="service-card"><div class="service-icon">✨</div><h3 data-en="Cosmetic Dentistry" data-ar="تجميل الأسنان">Cosmetic Dentistry</h3><p data-en="Smile-focused treatments designed to improve the appearance of your teeth." data-ar="علاجات مخصصة لتحسين مظهر الأسنان والحصول على ابتسامة أكثر إشراقًا.">Smile-focused treatments designed to improve the appearance of your teeth.</p></div><div class="service-card"><div class="service-icon">😁</div><h3 data-en="Teeth Whitening" data-ar="تبييض الأسنان">Teeth Whitening</h3><p data-en="Professional whitening solutions for a brighter and more confident smile." data-ar="حلول احترافية لتبييض الأسنان للحصول على ابتسامة أكثر إشراقًا وثقة.">Professional whitening solutions for a brighter and more confident smile.</p></div><div class="service-card"><div class="service-icon">🩺</div><h3 data-en="Dental Implants" data-ar="زراعة الأسنان">Dental Implants</h3><p data-en="Modern solutions for replacing missing teeth and restoring function." data-ar="حلول حديثة لتعويض الأسنان المفقودة واستعادة وظيفة الفم.">Modern solutions for replacing missing teeth and restoring function.</p></div><div class="service-card"><div class="service-icon">🦷</div><h3 data-en="Root Canal Treatment" data-ar="علاج جذور الأسنان">Root Canal Treatment</h3><p data-en="Careful treatment designed to relieve pain and preserve your natural tooth." data-ar="علاج دقيق لتخفيف الألم والحفاظ على الأسنان الطبيعية قدر الإمكان.">Careful treatment designed to relieve pain and preserve your natural tooth.</p></div><div class="service-card"><div class="service-icon">👶</div><h3 data-en="Children's Dentistry" data-ar="طب أسنان الأطفال">Children's Dentistry</h3><p data-en="Friendly dental care that helps children build healthy habits from an early age." data-ar="رعاية لطيفة تساعد الأطفال على بناء عادات صحية لأسنانهم منذ الصغر.">Friendly dental care that helps children build healthy habits from an early age.</p></div></div></div></section>
+<section id="about"><div class="container about-grid"><div class="about-box"><div><strong>+</strong><h3 data-en="A better dental experience" data-ar="تجربة أفضل لعلاج الأسنان">A better dental experience</h3><p data-en="Modern technology. Personal attention. Honest care." data-ar="تكنولوجيا حديثة. اهتمام شخصي. رعاية صادقة.">Modern technology. Personal attention. Honest care.</p></div></div><div class="about-content"><small data-en="ABOUT NOVO" data-ar="عن NOVO">ABOUT NOVO</small><h2 data-en="Dental Care Built Around You" data-ar="رعاية أسنان مصممة من أجلك">Dental Care Built Around You</h2><p data-en="At NOVO Dental Clinic, we believe dental care should be professional, comfortable, and easy to understand." data-ar="في NOVO Dental Clinic نؤمن أن رعاية الأسنان يجب أن تكون احترافية ومريحة وسهلة الفهم.">At NOVO Dental Clinic, we believe dental care should be professional, comfortable, and easy to understand.</p><p data-en="Our approach combines modern techniques with personal attention to help every patient feel confident throughout their treatment." data-ar="نجمع بين التقنيات الحديثة والاهتمام الشخصي لمساعدة كل مريض على الشعور بالثقة والراحة طوال فترة العلاج.">Our approach combines modern techniques with personal attention to help every patient feel confident throughout their treatment.</p><ul class="check-list"><li data-en="Clear treatment plans" data-ar="خطط علاج واضحة">Clear treatment plans</li><li data-en="Comfort-focused care" data-ar="رعاية تركز على راحتك">Comfort-focused care</li><li data-en="Modern dental technology" data-ar="تكنولوجيا أسنان حديثة">Modern dental technology</li></ul></div></div></section>
+<section class="doctor-section" id="doctor"><div class="container"><div class="section-heading"><small data-en="YOUR DENTIST" data-ar="طبيب الأسنان">YOUR DENTIST</small><h2 data-en="Professional Care You Can Trust" data-ar="رعاية احترافية يمكنك الوثوق بها">Professional Care You Can Trust</h2></div><div class="doctor-card"><div class="doctor-photo">+</div><div class="doctor-content"><small data-en="DENTAL SPECIALIST" data-ar="طبيب أسنان متخصص">DENTAL SPECIALIST</small><h3 data-en="Dr. NOVO" data-ar="د. NOVO">Dr. NOVO</h3><p data-en="Dedicated to providing thoughtful, modern dental care with a strong focus on patient comfort and natural-looking results." data-ar="متخصص في تقديم رعاية أسنان حديثة باهتمام كبير براحة المريض والحصول على نتائج طبيعية.">Dedicated to providing thoughtful, modern dental care with a strong focus on patient comfort and natural-looking results.</p></div></div></div></section>
+<section><div class="container"><div class="section-heading"><small data-en="WHY NOVO" data-ar="لماذا NOVO">WHY NOVO</small><h2 data-en="A Simpler, Better Dental Experience" data-ar="تجربة أسنان أبسط وأفضل">A Simpler, Better Dental Experience</h2></div><div class="why-grid"><div class="why-card"><div class="why-number">01</div><h3 data-en="Listen First" data-ar="نستمع أولاً">Listen First</h3><p data-en="We start by understanding your concerns and goals." data-ar="نبدأ بفهم مشاكلك واحتياجاتك وأهدافك.">We start by understanding your concerns and goals.</p></div><div class="why-card"><div class="why-number">02</div><h3 data-en="Explain Clearly" data-ar="نشرح بوضوح">Explain Clearly</h3><p data-en="We explain your treatment options in a simple and transparent way." data-ar="نشرح لك خيارات العلاج بطريقة بسيطة وواضحة.">We explain your treatment options in a simple and transparent way.</p></div><div class="why-card"><div class="why-number">03</div><h3 data-en="Care Personally" data-ar="نهتم بك شخصيًا">Care Personally</h3><p data-en="Every treatment plan is designed around your individual needs." data-ar="كل خطة علاج يتم تصميمها وفقًا لاحتياجاتك الخاصة.">Every treatment plan is designed around your individual needs.</p></div></div></div></section>
+<section class="testimonials"><div class="container"><div class="section-heading"><small data-en="PATIENT EXPERIENCE" data-ar="تجربة المرضى">PATIENT EXPERIENCE</small><h2 data-en="What Our Patients Say" data-ar="ماذا يقول مرضاؤنا">What Our Patients Say</h2></div><div class="testimonial-grid"><div class="testimonial"><div class="stars">★★★★★</div><p data-en="A comfortable experience from the first consultation. Everything was explained clearly." data-ar="تجربة مريحة من أول استشارة، وكل شيء تم شرحه بشكل واضح.">A comfortable experience from the first consultation. Everything was explained clearly.</p><strong data-en="NOVO Patient" data-ar="أحد مرضى NOVO">NOVO Patient</strong></div><div class="testimonial"><div class="stars">★★★★★</div><p data-en="Professional service and a very friendly atmosphere. I felt comfortable throughout the visit." data-ar="خدمة احترافية وأجواء ودودة جدًا. شعرت بالراحة طوال الزيارة.">Professional service and a very friendly atmosphere. I felt comfortable throughout the visit.</p><strong data-en="NOVO Patient" data-ar="أحد مرضى NOVO">NOVO Patient</strong></div><div class="testimonial"><div class="stars">★★★★★</div><p data-en="Modern clinic, clear communication, and attention to detail." data-ar="عيادة حديثة وتواصل واضح واهتمام بالتفاصيل.">Modern clinic, clear communication, and attention to detail.</p><strong data-en="NOVO Patient" data-ar="أحد مرضى NOVO">NOVO Patient</strong></div></div></div></section>
+<section id="contact"><div class="container contact-grid"><div class="contact-info"><small data-en="BOOK YOUR VISIT" data-ar="احجز زيارتك">BOOK YOUR VISIT</small><h2 data-en="Let's Take Care of Your Smile" data-ar="نهتم بابتسامتك معًا">Let's Take Care of Your Smile</h2><p data-en="Tell us what you need and our team will contact you to arrange your appointment." data-ar="أخبرنا بما تحتاجه وسيتواصل معك فريقنا لتنسيق موعدك.">Tell us what you need and our team will contact you to arrange your appointment.</p><div class="contact-details"><div class="contact-detail"><strong data-en="Phone" data-ar="الهاتف">Phone</strong><span>+20 128 912 2717</span></div><div class="contact-detail"><strong data-en="WhatsApp" data-ar="واتساب">WhatsApp</strong><span data-en="Available for appointment requests" data-ar="متاح لطلبات حجز المواعيد">Available for appointment requests</span></div><div class="contact-detail"><strong data-en="Clinic" data-ar="العيادة">Clinic</strong><span data-en="NOVO Dental Clinic" data-ar="عيادة NOVO للأسنان">NOVO Dental Clinic</span></div></div></div><div class="form-card"><h3 data-en="Book an Appointment" data-ar="احجز موعدًا">Book an Appointment</h3><form id="appointmentForm"><div class="form-group"><label for="name" data-en="Your Name" data-ar="الاسم">Your Name</label><input type="text" id="name" name="name" required data-en-placeholder="Enter your name" data-ar-placeholder="اكتب اسمك" placeholder="Enter your name"></div><div class="form-group"><label for="phone" data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</label><input type="tel" id="phone" name="phone" required data-en-placeholder="Enter your phone number" data-ar-placeholder="اكتب رقم هاتفك" placeholder="Enter your phone number"></div><div class="form-group"><label for="message" data-en="Message" data-ar="الرسالة">Message</label><textarea id="message" name="message" data-en-placeholder="Tell us how we can help you" data-ar-placeholder="اكتب لنا كيف يمكننا مساعدتك" placeholder="Tell us how we can help you"></textarea></div><button type="submit" class="btn btn-primary form-submit" id="submitBtn" data-en="Send Appointment Request" data-ar="إرسال طلب الحجز">Send Appointment Request</button><div id="formStatus"></div></form></div></div></section>
+</main>
+<footer><div class="container footer-inner"><div class="footer-logo">NOVO<span>.</span></div><div class="footer-copy" data-en="© 2026 NOVO Dental Clinic. All rights reserved." data-ar="© 2026 NOVO Dental Clinic. جميع الحقوق محفوظة.">© 2026 NOVO Dental Clinic. All rights reserved.</div></div></footer>
+<a href="https://wa.me/201289122717" target="_blank" class="whatsapp" aria-label="WhatsApp">☎</a>
+<script>
+const SCRIPT_URL="https://script.google.com/macros/s/AKfycbzdlh4jDVJBMOkOe-vnrYr3EKsjN14qwhtaQ21VoElC-oz1dXihOkbQWb7jdTmZohJi/exec";
+const WHATSAPP_NUMBER="201289122717";
+let currentLanguage="en";
+
+function applyLanguage(){
+  document.body.classList.toggle("ar", currentLanguage === "ar");
+  document.documentElement.lang = currentLanguage;
+  document.documentElement.dir = currentLanguage === "ar" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-en][data-ar]").forEach(function(element){
+    element.textContent = currentLanguage === "en"
+      ? element.getAttribute("data-en")
+      : element.getAttribute("data-ar");
+  });
+
+  document.querySelectorAll("[data-en-placeholder][data-ar-placeholder]").forEach(function(element){
+    element.placeholder = currentLanguage === "en"
+      ? element.getAttribute("data-en-placeholder")
+      : element.getAttribute("data-ar-placeholder");
+  });
+
+  const languageBtn = document.getElementById("languageBtn");
+  if(languageBtn){
+    languageBtn.textContent = currentLanguage === "en" ? "العربية" : "English";
+  }
+}
+
+function toggleLanguage(){
+  currentLanguage = currentLanguage === "en" ? "ar" : "en";
+  applyLanguage();
+}
+
+function toggleMobileMenu(){
+  const nav = document.querySelector(".nav-links");
+  if(!nav) return;
+  if(nav.style.display === "flex"){
+    nav.style.display = "none";
+  }else{
+    nav.style.display = "flex";
+    nav.style.flexDirection = "column";
+    nav.style.position = "absolute";
+    nav.style.top = "76px";
+    nav.style.left = "0";
+    nav.style.right = "0";
+    nav.style.background = "#fff";
+    nav.style.padding = "20px";
+    nav.style.borderBottom = "1px solid #e8eef3";
+  }
+}
+
+function sendLeadToGoogle(name, phone, message){
+  /*
+    Use a real HTML POST instead of fetch/no-cors.
+    This works reliably with Google Apps Script from GitHub Pages.
+  */
+  const iframe = document.createElement("iframe");
+  iframe.name = "novoLeadFrame";
+  iframe.style.display = "none";
+  document.body.appendChild(iframe);
+
+  const form = document.createElement("form");
+  form.method = "POST";
+  form.action = SCRIPT_URL;
+  form.target = "novoLeadFrame";
+  form.style.display = "none";
+
+  const fields = {
+    name: name,
+    phone: phone,
+    message: message,
+    source: "NOVO Dental Website",
+    language: currentLanguage
+  };
+
+  Object.keys(fields).forEach(function(key){
+    const input = document.createElement("input");
+    input.type = "hidden";
+    input.name = key;
+    input.value = fields[key];
+    form.appendChild(input);
+  });
+
+  document.body.appendChild(form);
+  form.submit();
+
+  setTimeout(function(){
+    form.remove();
+    iframe.remove();
+  }, 5000);
+}
+
+function openWhatsApp(name, phone, message){
+  const whatsappMessage = currentLanguage === "en"
+    ? `Hello NOVO Dental Clinic,\n\nI would like to request an appointment.\n\nName: ${name}\nPhone: ${phone}\nMessage: ${message || "No additional message."}`
+    : `مرحبًا NOVO Dental Clinic،\n\nأرغب في حجز موعد.\n\nالاسم: ${name}\nالهاتف: ${phone}\nالرسالة: ${message || "لا توجد رسالة إضافية."}`;
+
+  const whatsappURL = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(whatsappMessage);
+
+  /* Direct navigation avoids Chrome blocking window.open after async code. */
+  window.location.href = whatsappURL;
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+  const languageBtn = document.getElementById("languageBtn");
+  if(languageBtn){
+    languageBtn.addEventListener("click", toggleLanguage);
+  }
+
+  applyLanguage();
+
+  const appointmentForm = document.getElementById("appointmentForm");
+  const submitBtn = document.getElementById("submitBtn");
+  const formStatus = document.getElementById("formStatus");
+
+  if(!appointmentForm) return;
+
+  appointmentForm.addEventListener("submit", function(event){
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if(!name || !phone){
+      formStatus.textContent = currentLanguage === "en"
+        ? "Please enter your name and phone number."
+        : "من فضلك أدخل الاسم ورقم الهاتف.";
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = currentLanguage === "en" ? "Sending..." : "جاري الإرسال...";
+
+    /* Send the lead to Google Sheets. */
+    sendLeadToGoogle(name, phone, message);
+
+    /* Then open WhatsApp directly. */
+    openWhatsApp(name, phone, message);
+  });
+});
+</script>
+</body>
+</html>
